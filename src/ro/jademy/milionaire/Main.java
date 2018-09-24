@@ -22,10 +22,8 @@ public class Main {
             ArrayList<Question> gameQuestions = getGameQuestionList();
             Game game = new Game(gameQuestions);
             game.startGame();
-            game.currentLevel += 1;
         } while (a.equalsIgnoreCase("Yes")/*&&game.currentLevel!=*/);
 
-        game.end();
     }
 
     private static void initQuestions(){

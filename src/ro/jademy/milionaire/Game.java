@@ -7,18 +7,17 @@ public class Game {
     //questions, level/score, helping hands
     //start() , answer(), 50/50(), give up()
     //initializam intrebarle si jocul
-    int currentLevel = 1;
-    List<Question> questions = new ArrayList<>();
-    int maxLevel = questions.size();
+    private int currentLevel = 1;
+    private List<Question> questions = new ArrayList<>();
+    private int maxLevel = questions.size();
     Random random = new Random();
 
     public Game(List<Question> questions) {
         this.questions.addAll(questions);
     }
 
-    public void startGame() {
+    public void startGame(List<Question> questions) {
         //initialize game
-        System.out.println(questions.getQuestion());
     }
 
     public void askQuestion() {
@@ -27,9 +26,13 @@ public class Game {
         for (Question question : questions) {
             if(question.getDifficultyLevel() == currentLevel){
                 System.out.println(question.getQuestion());
-            }else
+            }
         }
 
+    }
+
+    public int getCurrentLevel() {
+        return currentLevel;
     }
 
     public void answerQuestion() {
@@ -44,8 +47,10 @@ public class Game {
         //show the same question but only with 2 possible answers
     }
 
-    public void end(){
+    public boolean isFinished(){
+        if(){
 
+        }
     }
 
 
